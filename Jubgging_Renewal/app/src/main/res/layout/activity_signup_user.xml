@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="signup_user"
+            type="com.getupmina.android.jubgging.SignUpUserActivity" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_grey"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/signup_user_app_logo"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_35dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/app_logo"
+                app:layout_constraintDimensionRatio="1:0.37"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.225" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/signup_nickname_cl"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.125"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/signup_user_app_logo">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/signup_nickname_tv"
+                    style="@style/signUpUserTextTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:autoSizeMaxTextSize="20sp"
+                    android:autoSizeMinTextSize="10sp"
+                    android:autoSizeStepGranularity="1sp"
+                    android:autoSizeTextType="uniform"
+                    android:gravity="center_vertical|start"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:text="@string/nickname_text"
+                    app:layout_constraintBottom_toTopOf="@+id/signup_nickname_et"
+                    app:layout_constraintDimensionRatio="1:0.05"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="spread_inside"
+                    app:layout_constraintWidth_percent="0.861" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/signup_nickname_et"
+                    style="@style/signUpUserInputTextTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:background="@drawable/white_round_square_drawable"
+                    android:elevation="3dp"
+                    android:gravity="center_vertical|start"
+                    android:includeFontPadding="false"
+                    android:paddingHorizontal="@dimen/_10dp"
+                    android:text="@string/temp_nickname"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toTopOf="@+id/signup_nickname_no_tv"
+                    app:layout_constraintEnd_toStartOf="@+id/signup_nickname_btn"
+                    app:layout_constraintHeight_percent="0.438"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="@+id/signup_nickname_tv"
+                    app:layout_constraintTop_toBottomOf="@+id/signup_nickname_tv"
+                    app:layout_constraintWidth_percent="0.647" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/signup_nickname_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/white_round_square_drawable"
+                    android:elevation="6dp"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:text="확인"
+                    app:layout_constraintBottom_toBottomOf="@id/signup_nickname_et"
+                    app:layout_constraintEnd_toEndOf="@id/signup_nickname_tv"
+                    app:layout_constraintStart_toEndOf="@+id/signup_nickname_et"
+                    app:layout_constraintTop_toTopOf="@id/signup_nickname_et"
+                    app:layout_constraintWidth_percent="0.172" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/signup_nickname_no_tv"
+                    style="@style/signUpNoticeTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:autoSizeMaxTextSize="20sp"
+                    android:autoSizeMinTextSize="10sp"
+                    android:autoSizeStepGranularity="1sp"
+                    android:autoSizeTextType="uniform"
+                    android:gravity="start|center_vertical"
+                    android:includeFontPadding="false"
+                    android:text="이미 사용 중인 닉네임입니다."
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:0.04"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/signup_nickname_et"
+                    app:layout_constraintWidth_percent="0.861" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

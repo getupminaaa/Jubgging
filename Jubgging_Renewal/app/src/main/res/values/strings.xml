@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Jubgging_Renewal</string>
+    <string name="signup_user_btn_text">다음 단계로 이동하기 (1/2)</string>
+    <string name="nickname_text">닉네임</string>
+    <string name="temp_nickname">광광우럭따</string>
 </resources>
