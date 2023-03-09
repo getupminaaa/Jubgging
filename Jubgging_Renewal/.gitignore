@@ -169,4 +169,5 @@ fabric.properties
 
 !/gradle/wrapper/gradle-wrapper.jar
 /app/google-services.json
+/app/src/main/res/font
 # End of https://www.toptal.com/developers/gitignore/api/androidstudio
