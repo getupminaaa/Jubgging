@@ -34,17 +34,16 @@
                 app:layout_constraintWidth_percent="0.225" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/signup_nickname_cl"
+                android:id="@+id/nickname_cl"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_30dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHeight_percent="0.125"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/signup_user_app_logo">
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/signup_nickname_tv"
+                    android:id="@+id/nickname_tv"
                     style="@style/signUpUserTextTheme"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
@@ -56,7 +55,7 @@
                     android:includeFontPadding="false"
                     android:maxLines="1"
                     android:text="@string/nickname_text"
-                    app:layout_constraintBottom_toTopOf="@+id/signup_nickname_et"
+                    app:layout_constraintBottom_toTopOf="@+id/nickname_et"
                     app:layout_constraintDimensionRatio="1:0.05"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -66,7 +65,7 @@
                     app:layout_constraintWidth_percent="0.861" />
 
                 <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/signup_nickname_et"
+                    android:id="@+id/nickname_et"
                     style="@style/signUpUserInputTextTheme"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
@@ -78,32 +77,33 @@
                     android:paddingHorizontal="@dimen/_10dp"
                     android:text="@string/temp_nickname"
                     android:textSize="15sp"
-                    app:layout_constraintBottom_toTopOf="@+id/signup_nickname_no_tv"
-                    app:layout_constraintEnd_toStartOf="@+id/signup_nickname_btn"
-                    app:layout_constraintHeight_percent="0.438"
+                    app:layout_constraintBottom_toTopOf="@+id/nickname_no_tv"
+                    app:layout_constraintEnd_toStartOf="@+id/nickname_check_btn"
+                    app:layout_constraintDimensionRatio="1:0.15"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintHorizontal_chainStyle="spread_inside"
-                    app:layout_constraintStart_toStartOf="@+id/signup_nickname_tv"
-                    app:layout_constraintTop_toBottomOf="@+id/signup_nickname_tv"
+                    app:layout_constraintStart_toStartOf="@+id/nickname_tv"
+                    app:layout_constraintTop_toBottomOf="@+id/nickname_tv"
                     app:layout_constraintWidth_percent="0.647" />
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/signup_nickname_btn"
+                    android:id="@+id/nickname_check_btn"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
+
                     android:background="@drawable/white_round_square_drawable"
                     android:elevation="6dp"
                     android:minWidth="0dp"
                     android:minHeight="0dp"
-                    android:text="확인"
-                    app:layout_constraintBottom_toBottomOf="@id/signup_nickname_et"
-                    app:layout_constraintEnd_toEndOf="@id/signup_nickname_tv"
-                    app:layout_constraintStart_toEndOf="@+id/signup_nickname_et"
-                    app:layout_constraintTop_toTopOf="@id/signup_nickname_et"
+                    android:text="@string/check"
+                    app:layout_constraintBottom_toBottomOf="@id/nickname_et"
+                    app:layout_constraintEnd_toEndOf="@id/nickname_tv"
+                    app:layout_constraintStart_toEndOf="@+id/nickname_et"
+                    app:layout_constraintTop_toTopOf="@id/nickname_et"
                     app:layout_constraintWidth_percent="0.172" />
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/signup_nickname_no_tv"
+                    android:id="@+id/nickname_no_tv"
                     style="@style/signUpNoticeTheme"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
@@ -114,17 +114,187 @@
                     android:autoSizeTextType="uniform"
                     android:gravity="start|center_vertical"
                     android:includeFontPadding="false"
-                    android:text="이미 사용 중인 닉네임입니다."
+                    android:text="@string/nickname_overlap_notice"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintDimensionRatio="1:0.04"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/nickname_et"
                     app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/signup_nickname_et"
-                    app:layout_constraintWidth_percent="0.861" />
+                    app:layout_constraintStart_toStartOf="@+id/nickname_et"
+                    app:layout_constraintTop_toBottomOf="@+id/nickname_et"
+                    app:layout_constraintDimensionRatio="1:0.06"
+                    app:layout_constraintWidth_percent="0.647" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/email_cl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nickname_cl">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/email_tv"
+                    style="@style/signUpUserTextTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:autoSizeMaxTextSize="20sp"
+                    android:autoSizeMinTextSize="10sp"
+                    android:autoSizeStepGranularity="1sp"
+                    android:autoSizeTextType="uniform"
+                    android:gravity="center_vertical|start"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:text="@string/email"
+                    app:layout_constraintDimensionRatio="1:0.05"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.861" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/email_et"
+                    style="@style/signUpUserInputTextTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:background="@drawable/white_round_square_drawable"
+                    android:elevation="3dp"
+                    android:gravity="center_vertical|start"
+                    android:includeFontPadding="false"
+                    android:paddingHorizontal="@dimen/_10dp"
+                    android:text="@string/email_temp"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toTopOf="@+id/email_no_tv"
+                    app:layout_constraintDimensionRatio="1:0.15"
+                    app:layout_constraintEnd_toStartOf="@+id/email_check_btn"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="@+id/email_tv"
+                    app:layout_constraintTop_toBottomOf="@+id/email_tv"
+                    app:layout_constraintWidth_percent="0.647" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/email_check_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/white_round_square_drawable"
+                    android:elevation="6dp"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:text="@string/certification"
+                    app:layout_constraintBottom_toBottomOf="@id/email_et"
+                    app:layout_constraintEnd_toEndOf="@id/email_tv"
+                    app:layout_constraintStart_toEndOf="@+id/email_et"
+                    app:layout_constraintTop_toTopOf="@id/email_et"
+                    app:layout_constraintWidth_percent="0.172" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/email_no_tv"
+                    style="@style/signUpNoticeTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:autoSizeMaxTextSize="20sp"
+                    android:autoSizeMinTextSize="10sp"
+                    android:autoSizeStepGranularity="1sp"
+                    android:autoSizeTextType="uniform"
+                    android:gravity="end|center_vertical"
+                    android:includeFontPadding="false"
+                    android:text="@string/email_wrong_regex_notice"
+                    android:textAlignment="viewEnd"
+                    app:layout_constraintDimensionRatio="1:0.06"
+                    app:layout_constraintEnd_toEndOf="@+id/email_et"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@+id/email_et"
+                    app:layout_constraintTop_toBottomOf="@+id/email_et"
+                    app:layout_constraintWidth_percent="0.647" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/auth_timer_tv"
+                    style="@style/signUpTimerTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginEnd="@dimen/_10dp"
+                    android:autoSizeMaxTextSize="20sp"
+                    android:autoSizeMinTextSize="10sp"
+                    android:autoSizeStepGranularity="1sp"
+                    android:autoSizeTextType="uniform"
+                    android:gravity="end|center_vertical"
+                    android:includeFontPadding="false"
+                    android:inputType="numberDecimal"
+                    android:maxLength="6"
+                    android:text="@string/timer_temp"
+                    app:layout_constraintBottom_toBottomOf="@id/auth_code_et"
+                    app:layout_constraintDimensionRatio="1:0.46"
+                    app:layout_constraintEnd_toStartOf="@id/auth_code_et"
+                    app:layout_constraintTop_toTopOf="@id/auth_code_et"
+                    app:layout_constraintWidth_percent="0.083"
+
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/auth_code_et"
+                    style="@style/signUpUserInputTextTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:background="@drawable/white_round_square_drawable"
+                    android:elevation="3dp"
+                    android:textAlignment="viewEnd"
+                    android:gravity="center_vertical|end"
+                    android:includeFontPadding="false"
+                    android:paddingHorizontal="@dimen/_10dp"
+                    android:text="@string/auth_code_temp"
+                    android:textSize="15sp"
+                    app:layout_constraintDimensionRatio="1:0.186"
+                    app:layout_constraintEnd_toEndOf="@+id/email_no_tv"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintTop_toBottomOf="@id/email_no_tv"
+                    app:layout_constraintWidth_percent="0.52" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/auth_code_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/white_round_square_drawable"
+                    android:elevation="6dp"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:text="@string/certification"
+                    app:layout_constraintBottom_toBottomOf="@id/auth_code_et"
+                    app:layout_constraintEnd_toEndOf="@+id/email_check_btn"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@+id/email_check_btn"
+                    app:layout_constraintTop_toTopOf="@id/auth_code_et"
+                    app:layout_constraintWidth_percent="0.172" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/auth_code_no_tv"
+                    style="@style/signUpNoticeTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:autoSizeMaxTextSize="20sp"
+                    android:autoSizeMinTextSize="10sp"
+                    android:autoSizeStepGranularity="1sp"
+                    android:autoSizeTextType="uniform"
+                    android:gravity="end|center_vertical"
+                    android:includeFontPadding="false"
+                    android:text="@string/success_certification_no"
+                    android:textAlignment="viewEnd"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:0.06"
+                    app:layout_constraintEnd_toEndOf="@+id/auth_code_et"
+                    app:layout_constraintStart_toEndOf="@+id/auth_code_et"
+                    app:layout_constraintStart_toStartOf="@+id/email_no_tv"
+                    app:layout_constraintTop_toBottomOf="@+id/auth_code_et"
+                    app:layout_constraintWidth_percent="0.647" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>

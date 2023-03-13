@@ -3,4 +3,13 @@
     <string name="signup_user_btn_text">다음 단계로 이동하기 (1/2)</string>
     <string name="nickname_text">닉네임</string>
     <string name="temp_nickname">광광우럭따</string>
+    <string name="nickname_overlap_notice">이미 사용 중인 닉네임입니다.</string>
+    <string name="email">이메일</string>
+    <string name="email_temp">qwerty@qwerty.com</string>
+    <string name="certification">인증</string>
+    <string name="check">확인</string>
+    <string name="email_wrong_regex_notice">잘못된 이메일 형식입니다.</string>
+    <string name="auth_code_temp">123456</string>
+    <string name="timer_temp">00:59</string>
+    <string name="success_certification_no">인증에 성공하였습니다.</string>
 </resources>

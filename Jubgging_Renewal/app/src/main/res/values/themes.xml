@@ -31,4 +31,9 @@
         <item name="fontFamily">@font/pretendard_regular</item>
         <item name="android:textAlignment">textStart</item>
     </style>
+    <style name="signUpTimerTheme" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/red</item>
+        <item name="fontFamily">@font/pretendard_semibold</item>
+        <item name="android:textAlignment">textStart</item>
+    </style>
 </resources>
